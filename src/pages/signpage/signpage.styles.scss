@@ -1,0 +1,13 @@
+.sign-container {
+  display: flex;
+  //   align-items: center;
+  justify-content: space-around;
+
+  & > * {
+    flex: 0 0 40%;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    flex-direction: column;
+  }
+}

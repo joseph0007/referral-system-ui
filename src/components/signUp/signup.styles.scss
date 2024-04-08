@@ -1,0 +1,12 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin: 1rem 0;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    padding: 2rem;
+  }
+}

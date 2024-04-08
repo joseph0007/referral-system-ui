@@ -1,0 +1,30 @@
+.header {
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  position: relative;
+
+  .logo-container {
+    align-self: center;
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .option {
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+    }
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    padding: 0 2rem;
+  }
+}

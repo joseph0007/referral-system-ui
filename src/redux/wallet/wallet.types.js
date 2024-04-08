@@ -1,0 +1,4 @@
+export const walletTypes = {
+  FETCH_WALLET_SET: "FETCH_WALLET_SET",
+  FETCH_WALLET_REMOVE: "FETCH_WALLET_REMOVE"
+};
