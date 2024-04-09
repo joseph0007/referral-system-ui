@@ -42,12 +42,12 @@ export function* googleSignInStart(data) {
 
     const { status, message, user } = response;
     if( status !== "success" ) {
-      throw Error(message || "User login failed.");
+      throw response
     }
 
     yield put(signInSuccess(user));
   } catch (error) {
-    yield put(signInFailure(error));
+    yield put(signInFailure(error.message));
   }
 }
 
@@ -63,12 +63,12 @@ export function* emailAndPassLogin({ payload }) {
 
     const { status, user, message } = response;
     if( status !== "success" ) {
-      throw Error(message || "User login failed.");
+      throw response
     }
 
     yield put(signInSuccess(user));
   } catch (error) {
-    yield put(signInFailure(error));
+    yield put(signInFailure(error.message));
   }
 }
 
@@ -92,7 +92,7 @@ export function* checkUserAuth(currentUser) {
 
     yield put(signInSuccess(user));
   } catch (error) {
-    yield put(signInFailure(error));
+    yield put(signInFailure(error.message));
     logout(currentUser);
   }
 }

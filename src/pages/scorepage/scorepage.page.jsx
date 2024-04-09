@@ -7,6 +7,7 @@ import { Profiler } from "react";
 import { errorMessage, isReferralDataLoaded, selectReferrals } from "../../redux/referrals/referral.selectors";
 import { fetchReferralDataProcessing } from "../../redux/referrals/referral.actions";
 import { selectCurrentUser } from "../../redux/users/users.selectors";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ScorePage = ({ isDataAvail, referrals, currentUser, fetchReferralData, errorMessage }) => {
   React.useEffect(() => {

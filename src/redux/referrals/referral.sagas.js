@@ -31,7 +31,6 @@ export function* createReferralLinkAsync() {
     const referralData = yield createUserReferralLink();
 
     let referralLink = "";
-    console.log("referralData.data ", referralData.data);
     if( referralData && referralData.data && referralData.data.referralLink ) {
       referralLink = referralData.data.referralLink;
     }

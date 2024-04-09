@@ -5,6 +5,7 @@ import "./signpage.styles.scss";
 import SignIn from "../../components/signIn/signIn.component";
 import SignUp from "../../components/signUp/signup.component";
 import { errorMessage } from "../../redux/users/users.selectors";
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignInPage = ({ errorMessage }) => {
   if( errorMessage ) {
