@@ -40,7 +40,7 @@ const referralReducer = (state = INITIAL_STATE, action) => {
     case referralTypes.GET_REFERRALLINK_SUCCESS: {
       return {
         ...state,
-        referralLink: action.payload,
+        referralLink: action.payload || "",
         isFetching: false,
         errorMessage: "",
       };

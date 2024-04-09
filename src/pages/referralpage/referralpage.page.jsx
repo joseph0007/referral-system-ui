@@ -73,7 +73,7 @@ const ReferralPage = ({ isDataAvail, referrals, currentUser, fetchReferralData, 
               isDataAvail && referrals ? 
               referrals.map((el) => {
                 return (
-                  <div style={{
+                  <div key={el._id} style={{
                     marginBottom: '10px'
                   }}> 
                     <div>

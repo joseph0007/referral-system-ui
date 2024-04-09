@@ -51,7 +51,7 @@ class SignIn extends React.Component {
     const { email, password } = this.state;
 
     let referral = "";
-    if( typeof this.props.match === 'object' && typeof this.props.match.params === 'object' && this.props.match.params.referralCode ) {
+    if( this.props.match && this.props.match.params && this.props.match.params.referralCode ) {
       referral = this.props.match.params.referralCode;
     }
 

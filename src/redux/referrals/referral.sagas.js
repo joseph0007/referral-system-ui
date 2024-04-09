@@ -31,7 +31,8 @@ export function* createReferralLinkAsync() {
     const referralData = yield createUserReferralLink();
 
     let referralLink = "";
-    if( referralData && typeof referralData.data === 'object' && referralData.data.referralLink ) {
+    console.log("referralData.data ", referralData.data);
+    if( referralData && referralData.data && referralData.data.referralLink ) {
       referralLink = referralData.data.referralLink;
     }
 
@@ -53,7 +54,7 @@ export function* getReferralLinkAsync({ payload }) {
     const referralData = yield getUserReferralLink(payload);
 
     let referralLink = "";
-    if( referralData && typeof referralData.data === 'object' && referralData.data.referralLink ) {
+    if( referralData && typeof referralData.data && referralData.data.referralLink ) {
       referralLink = referralData.data.referralLink;
     }
 
