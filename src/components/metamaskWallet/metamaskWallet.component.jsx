@@ -37,7 +37,7 @@ const MeatMaskButton = ({ setWalletData }) => {
           backgroundColor: 'orange'
 
         }} onClick={connect}>
-        Connect
+        Connect Wallet
       </button>
     </div>
   );
