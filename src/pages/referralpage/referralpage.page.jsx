@@ -41,6 +41,11 @@ const ReferralPage = ({ isDataAvail, referrals, currentUser, fetchReferralData, 
             Generate new link
           </button>
         </div>
+        <p style={{
+          marginBottom: "2rem"
+        }}> 
+          Note: Generating a new referral link will cause all the previous referral links to become invalid. 
+        </p>
         <h3 style={{
           marginBottom: "1rem"
         }}>
