@@ -2,6 +2,7 @@ import userTypes from "./user.types";
 
 const INITIAL_STATE = {
   currentUser: null,
+  errorMessage: "",
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -11,7 +12,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         currentUser: action.payload,
-        error: null,
+        errorMessage: "",
       };
     }
 
@@ -20,7 +21,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case userTypes.SIGN_UP_FAILURE: {
       return {
         ...state,
-        error: action.payload,
+        errorMessage: action.payload,
       };
     }
 
@@ -28,6 +29,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         currentUser: null,
+        errorMessage: "",
       };
     }
 

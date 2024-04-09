@@ -1,7 +1,8 @@
 import { walletTypes } from "./wallet.types";
 
 const INITIAL_STATE = {
-  walletData: null
+  walletData: null,
+  errorMessage: "",
 };
 
 const walletReducer = (state = INITIAL_STATE, action) => {

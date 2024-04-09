@@ -1,6 +1,7 @@
 // import "./homepage.styles.scss";
 import { HomePageContainer } from "./homapge.styles";
 import { Profiler } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 const HomePage = () => (
   <HomePageContainer>
@@ -18,6 +19,7 @@ const HomePage = () => (
         Hello world
       </div>
     </Profiler>
+    <ToastContainer />
   </HomePageContainer>
 );
 

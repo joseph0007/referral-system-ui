@@ -15,6 +15,7 @@ const referralReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         isFetching: true,
+        errorMessage: "",
       };
     }
 
@@ -23,6 +24,7 @@ const referralReducer = (state = INITIAL_STATE, action) => {
         ...state,
         referrals: action.payload,
         isFetching: false,
+        errorMessage: "",
       };
     }
 
@@ -30,7 +32,8 @@ const referralReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         referralLink: action.payload,
-        isFetching: false
+        isFetching: false,
+        errorMessage: "",
       };
     }
 
@@ -38,7 +41,8 @@ const referralReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         referralLink: action.payload,
-        isFetching: false
+        isFetching: false,
+        errorMessage: "",
       };
     }
 

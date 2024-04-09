@@ -12,9 +12,9 @@ export const createUserWithEmailAndPassword = async ( body ) => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong"
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong"
     };
   }
 }
@@ -27,9 +27,9 @@ export const signOut = async () => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong"
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong"
     };
   }
 }
@@ -64,9 +64,9 @@ export const checkAndCreateUser = async ( userAuth, token, referral ) => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong"
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong"
     };
   }
 }
@@ -83,9 +83,9 @@ export const signInWithEmailAndPassword = async ( body ) => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong"
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong"
     };
   }
 }
@@ -102,9 +102,9 @@ export const getTokenUsingOAuth = async ( body ) => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong"
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong"
     };
   }
 }
@@ -125,9 +125,9 @@ export const checkUserLogin = async () => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong",
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong",
       statusCode: error.statusCode
     };
   }
@@ -145,9 +145,9 @@ export const getUserReferrals = async (currentUser) => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong"
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong"
     };
   }
 }
@@ -164,9 +164,9 @@ export const getUserReferralLink = async (currentUser) => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong"
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong"
     };
   }
 }
@@ -187,9 +187,9 @@ export const createUserReferralLink = async (currentUser) => {
     return data;
   } catch (error) {
     console.log("error ", error);
-    return {
-      status: "failed",
-      message: "Something went wrong"
+    throw {
+      status: error.status || "failed",
+      message: error.message ||"Something went wrong"
     };
   }
 }
